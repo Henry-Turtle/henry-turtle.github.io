@@ -1,0 +1,171 @@
+*{
+    font-family: sans-serif;
+    display: block
+}
+
+
+/*
+Put photos of people on the left and write, but only if the screen if a certain size
+*/
+
+
+html, body{
+    margin: 0;
+    padding-top: 10px;
+
+    background-color: rgb(165, 165, 165);
+}
+
+.header{
+    margin: 0;
+    font-size: 55px;
+    color: rgb(60, 255, 0);
+    text-align: center;
+    margin: auto;
+    user-select: none;
+    
+}
+
+#words{
+    font-size: 80px;
+    padding-bottom: 20px;
+}
+#oboe{
+    width: 280px;
+    margin: auto;
+    display: block;
+}
+
+#input{
+
+    width: 400px;
+    height: 40px;
+    margin-top: 60px;
+
+    border: none;
+    border-radius: 10px;
+    text-align: center;
+    margin-left: auto;
+    margin-right: auto;
+
+}
+
+#input:focus{
+    outline: none;
+
+}
+
+.error{
+    animation: error 1s 
+}
+
+@keyframes error{
+    0%{
+        border: 0px solid red;
+    }
+    50%{
+        border: 10px solid red;
+    }
+    100%{
+        border: 0px solid red;
+    }
+
+}
+
+#search-cont{
+    width: 410px;
+    height: 100px;
+    overflow:hidden;
+    margin: 30px auto 0 auto;
+
+
+    text-align: center;
+}
+.search{
+    display: inline-block;
+    position: relative;
+    width: 200px;
+    height: 100px;
+    left: 0;
+    overflow: hidden;
+    user-select: none;
+
+
+    border: none;
+    font-size: 40px;
+    background-color: rgb(102, 136, 247);
+
+}
+
+.search:hover{
+    cursor: pointer;
+}
+
+
+.mleft{
+    animation-name: mleft;
+    animation-duration: .5s;
+    animation-fill-mode: forwards;
+}
+
+.mfarLeft{
+    animation-name: mfarLeft;
+    animation-duration: .5s;
+    animation-fill-mode: forwards;
+
+}
+
+.mright{
+    animation-name: mright;
+    animation-duration: .5s;
+    animation-fill-mode: forwards;
+}
+
+.mfarRight{
+    animation-name: mfarRight;
+    animation-duration: .5s;
+    animation-fill-mode: forwards;
+}
+
+
+
+@keyframes mleft{
+    0%{
+        left: 0;
+    }
+    100%{
+        background-color: rgb(57, 181, 74);
+        left: -100px;
+    }
+}
+
+@keyframes mfarLeft{
+    0%{
+        left: 0;
+    }
+    100%{
+        left: -210px;
+    }
+}
+@keyframes mright{
+    0%{
+        left: 0;
+        background-position-x: 0%
+        
+    }
+    100%{
+
+        background-color: rgb(57, 181, 74);
+        background-position-x: 100%;
+        left: 100px;
+    }
+}
+
+@keyframes mfarRight{
+    0%{
+        left: 0;
+    }
+    100%{
+        left: 210px;
+    }
+}
