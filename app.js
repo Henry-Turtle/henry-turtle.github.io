@@ -18,6 +18,18 @@ function init()
     englishbutt = document.getElementById("englishbutt");
     input = document.getElementById("input");
 
+    /*
+        Remove ghostery tag
+    */
+
+    styles = document.getElementsByTagName("style")
+
+    for (let i=0; i<styles.length;i++){
+        if (styles[i].innerHTML == '@media print {#ghostery-tracker-tally {display:none !important}}'){
+            styles[i].remove()
+            console.log("removed")
+        }
+    }
 
     /*
         Add event listeners
